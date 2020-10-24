@@ -1,0 +1,43 @@
+
+
+@media (max-width: 300px) {
+    html {
+        font-size: 1vw;
+    }
+}
+
+@media (min-width: 500px) {
+    html {
+        font-size: 1.5vw;
+    }
+}
+
+@media (min-width: 700px) {
+    html {
+        font-size:3vw;
+    }
+}
+@media (min-width: 1200px) {
+    html {
+        font-size: 4vw;
+    }
+}
+@media (min-width: 2400px) {
+    html {
+        font-size: 5vw;
+    }
+}
+@media (min-width: 4096px) {
+    html {
+        font-size: 6vw;
+    }
+}
+
+
+.var1{
+  border: 2px solid powderblue;
+  padding: 5px;
+  margin: 10px;
+}
+
+.container { width: 100%; margin: 0 auto; }

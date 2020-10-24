@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="stylesheet_v2.css">
+
+        <title>Javascript Example</title>
+      <script src="jquery-2.0.2.min.js"></script>
+    </head>
+     
+    <body class="setFont">
+    
+      <div class="singleCont" id="div1">
+      <p class="header">variable 1</p>
+      <p class="value" id='var1' >1.253</p>
+      </div>
+
+      <div class="singleCont" id="div2">
+      <p class="header">variable 2</p>
+      <p  class="value" id='var2' >2.563</p>
+      </div>
+
+      <div class="singleCont" id="div3">
+      <p class="header" >variable 3</p>
+      <p class="value" id='var3' >5.683</p>
+      </div>
+      <div class="singleCont" id="div4">
+      <p  class="header" >variable 4</p>
+      <p  class="value" id='var4' >9.856</p>
+      </div>
+
+     
+    </body>
+    <script  type="text/javascript">
+      var arr =[];
+    $(document).ready(function(){
+            $.ajaxSetup({ cache: false });
+        setInterval(function() {
+            $.get("IOCounter.htm", function(result){
+                
+                arr = result.split(',')
+                console.log(arr[0],arr[1])
+                console.log($('var1').html(arr[0]))
+                document.getElementById('var1').innerHTML=arr [0]
+                document.getElementById('var2').innerHTML=arr [1]
+                document.getElementById('var3').innerHTML=arr [2]
+                document.getElementById('var4').innerHTML=arr [3]
+              /*
+                $('var2').variables(arr[1])
+                $('var3').text(arr[2])
+                $('var4').text(arr[3])
+                */
+            });
+        },1000);
+        });
+
+    </script>
+ 
+</html>

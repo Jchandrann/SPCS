@@ -1,0 +1,25 @@
+html, body { height: 100%; padding: 0; margin: 0; }
+div { width: 48%; height: 49%; float: left; border: 1vw solid powderblue; }
+.header { background: #05371d;
+	     text-align: center;
+		 font-size: 5vw;
+		 color: #f8f8f8;
+		  fit-content(5vw)
+		  font-family: Georgia, serif;
+ }
+.singleCont{
+	
+  	
+}
+.value {
+		background: #18bc67;
+		color: #f8f8f8;
+		text-align: center;
+        font-size: 17vw;
+        fit-content(17vw)
+    }
+
+
+p { margin:0 }
+
+

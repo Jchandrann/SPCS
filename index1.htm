@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Javascript Example</title>
+    <script src="jquery-2.0.2.min.js"></script>
+    </head>
+    <body>
+      <label id="counter">0</label>
+      <label id="counter1">0</label>
+    </body>
+   
+    <script type="text/javascript">
+        var arr=[]
+        $(document).ready(function(){
+            $.ajaxSetup({ cache: false });
+        setInterval(function() {
+            $.get("IOCounter.htm", function(result){
+                $('#counter').text(result.trim());
+                console.log(result)
+
+              
+                arr = result.split(',') ;
+                console.log(arr[0],arr[1]) ;
+                $('#counter1').text(arr[0]);
+                
+            });
+        },1000);
+        });
+    </script>
+ 
+</html>
